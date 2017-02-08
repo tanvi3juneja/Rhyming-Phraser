@@ -31,8 +31,6 @@ with codecs.open("C:/Users/Akanksha/Desktop/hindicleaneddata.txt", 'r', 'utf8') 
                 cat[keyslist[i],valuesList[j]]=cat.get((keyslist[i],valuesList[j]),0)+1
             #cat[keyslist[i]].append(valuesList[i])
 
-
-
         for key, val in cat.items():
             file1.write(key[0].encode('utf-8')+ ':' + key[1].encode('utf-8')+ ';')
             file1.write("\n")
