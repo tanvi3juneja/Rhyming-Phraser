@@ -37,15 +37,8 @@ with codecs.open("C:/Users/Akanksha/Desktop/hindicleaneddata.txt", 'r', 'utf8') 
             file1.write(key[0].encode('utf-8')+ ':' + key[1].encode('utf-8')+ ';')
             file1.write("\n")
 
-
-
         file1.write("***********")
         file1.write("\n")
-
-
-
-
-
 
         # m=re.search("\<h2 class\=\"top0\"\>(.*)\<\/h2\>",letters[0])
         # print m.group(1)'''''

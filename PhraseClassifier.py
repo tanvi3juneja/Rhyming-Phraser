@@ -13,7 +13,6 @@ def findChunks(tempLine,Pos,Pod):
     Chunks=["Determiner|Noun","Determiner|Adjective|Noun","Noun|Preposition","Verb|AuxVerb","Verb|Pronoun","Pronoun|Verb","Adverb|Verb",
             "Noun|Noun","Adverb|Noun","Adjective|Noun","Adjective|Noun|Verb","Pronoun|Adjective|Noun","Pronoun|Noun|Adjective","Adverb|Adverb|Verb"]
 
-
     chunkParts=tempLine.split(pod)
     for i in range((0,chunkParts[0].__len__())):
         if pos(i) in Chunks:
@@ -37,7 +36,6 @@ def findChunks(tempLine,Pos,Pod):
             else:
                 if(pos(j)+pos(j+1)+pos(j+2)) in Chunks:
                     ChunkListSecond.append(chunkParts[j]+chunkParts[j+1]+chunkParts[j+2])
-
 
 def matchRhyme(word1,word2):
     #str1 = "tekst"
@@ -71,7 +69,6 @@ def matchRhyme(word1,word2):
         if (transliteratedtxt1[word1Index-1] == transliteratedtxt2[word2Index-1]):
             shorterWord=shorterWord-1
 
-
         #rhymeMeter=3;
         ##Matching if second Last character is any of the Matras!!
             if ( ((transliteratedtxt1[word1Index-2]=='a') and (transliteratedtxt2[word2Index-2]=='a')) or ((transliteratedtxt1[word1Index-2]=='e') and (transliteratedtxt2[word2Index-2]=='e'))or ((transliteratedtxt1[word1Index-2]=='o') and (transliteratedtxt2[word2Index-2]=='o')) or ((transliteratedtxt1[word1Index-2]=='i') and (transliteratedtxt2[word2Index-2]=='i')) or ((transliteratedtxt1[word1Index-2]=='u') and (transliteratedtxt2[word2Index-2]=='u')) ):
@@ -91,13 +88,6 @@ def matchRhyme(word1,word2):
                     rhymeMeter=5
                 else:
                     rhymeMeter=4
-
-
-
-
-
-
-
 
             else:
 
@@ -121,25 +111,9 @@ def matchRhyme(word1,word2):
         else:
             rhymeMeter=1
 
-
-
     return rhymeMeter
 
-
-
-
-
-
-
 def findPos():
-    
-
-
-
-
-
-
-
 with open("readHindi.txt","r")as f:
     for line in f:
         words=line.split()
